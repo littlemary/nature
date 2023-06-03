@@ -1,0 +1,57 @@
+section.section__things{
+  h2{
+    text-align: center;
+    margin-bottom: 59px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    letter-spacing: -0.025em;
+
+    color: #222222;
+  }
+  .container{
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin: 0 auto;
+    margin-bottom: 149px;
+    @media(max-width: 1500px){
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+
+    }
+    
+    .item{
+      position: relative;
+      width: 620px;
+      padding-top: 40px;
+
+      &__img{
+        border: 1px solid black;
+
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+      }
+      &__text{
+        position:absolute;
+        bottom: 61px;
+        left: 47px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 51px;
+        letter-spacing: -0.025em;
+
+        color: #FFFFFF;
+      }
+    }
+  }
+}

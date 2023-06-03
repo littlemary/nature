@@ -1,0 +1,178 @@
+section.section__testimonials{
+
+  .grey{
+    background-color: #F0F2F5;
+    width: 100%;
+
+    padding: 134px 147px;
+    @media(max-width: 1500px){
+      padding: 0;
+    }
+    .container{
+      position: relative;
+      max-width: 1626px;
+      height: 1011px;
+      margin: 0 auto;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      @media(max-width: 1500px){
+        width: 100%;
+        height: 1111px;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: space-between;
+      }
+      .testimonials__header{
+        // width: 50%;
+        // height: 1011px;
+        align-items: flex-start;
+        margin-top: 95px;
+        margin-left: 98px;
+        @media(max-width: 1500px){
+          text-align: center;
+          width: 100%;
+          margin: 95px auto;
+          align-items: center;
+          margin-bottom: 0;
+          text-align: center;
+        }
+        h2{
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 48px;
+          letter-spacing: -0.025em;
+          color: #222222;
+        }
+        p{
+          width: 705px;
+
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: -0.025em;
+
+          color: #898989;
+          @media(max-width: 1500px){
+            text-align: center;
+            width: 100%;
+          }
+        }
+       }
+      .testimonial__text{
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: 98px;
+        // width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media(max-width: 1500px){
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          margin: 5px auto;
+          text-align: center;
+        }
+              
+        .say{
+          width: 674px;
+          height: 152px;
+          margin-top: auto;
+          margin-bottom: 56px;
+          background-color: #F6F4FF;
+          border-radius: 16px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .testimonial{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .say__text{
+              width: 450px;
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 300;
+              font-size: 20px;
+              line-height: 24px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+
+              color: #000000;
+            }
+          }
+          .blueline{
+
+            background-color: #3685FB;
+            width: 100%;
+            height: 16px;
+            border-radius: 8px;
+          }
+        }
+      }
+      
+
+    }
+    .container__photo{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      // padding-left: 160px;
+    }
+}
+  
+.testimonials_photo{
+  width: 291px;
+  height: 447px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-right: 20px;
+}
+.testimonials_photo:last-of-type{
+  margin-right: 0;
+}
+.testimonials_photo.active{
+  border: 6px solid #3685FB;
+}
+.testimonials_photo.pos1{
+  margin-top: 422px;
+}
+.testimonials_photo.pos2{
+  margin-top: 318px;
+}
+.testimonials_photo.pos3{
+  margin-top: 199px;
+}
+.testimonials_photo.pos4{
+  margin-top: 95px;
+}
+.testimonials_photo.poscenter{
+  margin-left: 0 auto;
+  margin-top: 300px;
+}
+.testimonials_arrow{
+  width: 50px;
+  padding-top: 500px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: -0.025em;
+  color: #ccc;
+
+  cursor: pointer;
+}
+
+}
