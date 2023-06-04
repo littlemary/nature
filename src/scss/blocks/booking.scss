@@ -33,31 +33,10 @@ section.section__booking{
         color: #FFFFFF;
         text-align: center;
       }
-      &-btnbg{
-        margin: 0 auto;
-        width: 261px;
-        height: 72px; 
-        border-radius: 50px;
-        background-color: #fff;
-      }
       &-btn{
-        display:block;
-        padding-top:22px;
-        text-align: center;
-      
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 29px;
-        letter-spacing: -0.025em;
-      
-        background: linear-gradient(90deg, #E246EF 0%, #469EEF 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-       }
+        margin: 0 auto;
+
+      }
     }
   }
   

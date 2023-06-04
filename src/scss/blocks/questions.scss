@@ -1,0 +1,27 @@
+section.section__questions{
+  margin-top: 149px;
+  background: url('../img/bg/question_bg.jpg') center center/cover no-repeat;
+  min-height:1080px;
+  .container{
+    h2{
+      max-width: 493px;
+      min-height: 360px;
+      margin-left: 100px;
+      padding-top: 119px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 98.1695px;
+      line-height: 120px;
+      letter-spacing: -0.025em;
+
+      color: #FFFFFF;
+    }
+    &__btn{
+      margin-left: 100px;
+      margin-top:402px;
+      margin-bottom: 127px;
+      border-radius: 15px;
+    }
+  }
+}
