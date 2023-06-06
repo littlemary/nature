@@ -35,13 +35,13 @@
         font-size: 0;
         &__img{
           height: 236px;
-          width: 400px;
+          max-width: 400px;
           border-top-left-radius: 20px;
           border-top-right-radius: 20px;
         }
         .item__text{
           height: 284px;
-          width: 400px;
+          max-width: 400px;
           padding-top: 58px;
           padding-left: 47px;
           border-bottom-left-radius: 20px;
