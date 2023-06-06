@@ -98,7 +98,8 @@ class TestimonialsPhoto{
       case "prev": 
         arrow.textContent = "<";
         arrow.addEventListener("click", () => {
-          this.start_index-= this.countOnPage;
+          // this.start_index-= this.countOnPage;
+          this.start_index -= 1;
           this.end_index = this.start_index + this.countOnPage;
           if (this.end_index > testimonialsUsers.length){
             this.end_index = testimonialsUsers.length;
@@ -109,7 +110,8 @@ class TestimonialsPhoto{
       case "next":
         arrow.textContent = ">";
         arrow.addEventListener("click", () => {
-          this.start_index+= this.countOnPage;
+          // this.start_index+= this.countOnPage;
+          this.start_index += 1;
           this.end_index = this.start_index + this.countOnPage;
           if (this.end_index > testimonialsUsers.length){
             this.end_index = testimonialsUsers.length;
