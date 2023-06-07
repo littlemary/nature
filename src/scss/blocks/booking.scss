@@ -1,10 +1,13 @@
 section.section__booking{
-  height: 810px;
+  // height: 810px;
   width: 100%;
   margin-bottom: 150px;
+  @media(max-width: 480px){
+    margin-bottom: 20px;
+  }
   .container{
     position:relative;
-    height: 810px;
+    // max-height: 810px;
     .pinkblock{
       position:absolute;
       top:-97px;
@@ -17,10 +20,16 @@ section.section__booking{
       min-height: 713px;
       width: 70%;
       margin: 0 auto;
-      background-color: blue;
+      padding-bottom: 20px;
       background: url('../img/bg/booking_bg.jpg') center center/cover no-repeat;
+      display: flex;
+      justify-content: end;
+      flex-direction: column;
+      @media(max-width: 480px){
+        width: 100%;
+        min-height: 500px;
+      }
       h2{
-        padding-top: 465px;
         padding-bottom: 35px;
       
         font-family: 'Montserrat';
@@ -35,7 +44,6 @@ section.section__booking{
       }
       &-btn{
         margin: 0 auto;
-
       }
     }
   }

@@ -5,6 +5,9 @@ header{
  }
   padding-top: 72px;
   padding-bottom: 136px;
+  @media(max-width: 480px){
+    padding-bottom: 72px;
+  }
   justify-content: space-between;
   align-items: center;
   .header__logo{

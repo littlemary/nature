@@ -28,15 +28,20 @@ section.section__things{
     
     .item{
       position: relative;
-      width: 620px;
+      max-width: 620px;
       padding-top: 40px;
-
+      @media(max-width: 480px){
+        max-width: 450px;
+        height: auto;
+      }
+      @media(max-width: 320px){
+        max-width: 300px;
+        height: auto;
+      }
       &__img{
         border: 1px solid black;
-
-        -moz-border-radius: 20px;
-        -webkit-border-radius: 20px;
         border-radius: 20px;
+        width: 100%;
       }
       &__text{
         position:absolute;
@@ -51,6 +56,10 @@ section.section__things{
         letter-spacing: -0.025em;
 
         color: #FFFFFF;
+        @media(max-width: 480px){
+          font-size: 30px;
+          left: 30px;
+        }
       }
     }
   }

@@ -77,9 +77,9 @@ class TestimonialsPhoto{
   makePhotoClasses(){
     // console.log(this.window_width);
     switch (true) {
-      case (this.window_width < 768):  this.countOnPage = 1; break;
-      case (this.window_width >= 768 && this.window_width <= 992): this.countOnPage = 2; break;
-      case (this.window_width >= 992 && this.window_width <= 1200): this.countOnPage=3; break;
+      case (this.window_width < 760):  this.countOnPage = 1; break;
+      case (this.window_width >= 760 && this.window_width <= 1200): this.countOnPage = 2; break;
+      case (this.window_width >= 1200 && this.window_width <= 1600): this.countOnPage=3; break;
     }
     this.end_index = this.start_index + this.countOnPage;
     if (this.end_index > testimonialsUsers.length){

@@ -19,6 +19,9 @@ section.section__promo{
       @media(max-width: 1500px){
         padding-bottom: 50px;
       }
+      @media(max-width: 320px){
+        min-width: 300px;
+      }
       .round-img{
         display: inline-block;
 
@@ -29,7 +32,16 @@ section.section__promo{
         min-width: 450px;
         min-height: 620px;
         border-radius: 250px;
-        background: url('../img/firstpage/ellipse1.webp');
+        background: url('../img/firstpage/ellipse1.webp') center center;
+        @media(max-width: 320px){
+          min-width: 260px;
+          min-height: 359px;
+        }
+        
+        @media(max-width: 480px){
+          min-width: 280px;
+          min-height: 386px;
+        }
       }
       &-right{
         position:absolute;
@@ -56,16 +68,23 @@ section.section__promo{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
-        font-size: 68.385px;
+        font-size: 69px;
         line-height: 96px;
         letter-spacing: -0.025em;
         color: #091F3F;
+        @media(max-width: 480px){
+          font-size: 36px;
+          line-height: 47px;
+        }
         span{
           display: flex;
           img{
             display: inline-block;
             width: 325px;
             margin-left: 25px;
+            @media(max-width: 480px){
+              width: 150px;
+            }
           }
         }
       }
