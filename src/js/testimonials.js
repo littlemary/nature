@@ -5,6 +5,8 @@ const testimonialsUsers = readFile;
 
 const sayDiv = document.querySelector(".say");
 const sayLogo = sayDiv.querySelector(".say__icon");
+const sayLogoPic = sayDiv.querySelector('[type]');
+console.log(sayLogoPic);
 const sayText = sayDiv.querySelector(".say__text");
 
 class TestimonialsItem{
@@ -47,12 +49,14 @@ class TestimonialsItem{
     if (this.index === 1){
       divUser.classList.add("active");
       sayLogo.src = this.logo;
+      sayLogoPic.srcset = this.logo.replace("jpg", "webp");
       sayText.textContent = `" ${this.text} "`;
-    }
+     }
     divUser.addEventListener("click", (e)=>{
       this.makeActive(e);
       sayLogo.src = this.logo;
       sayText.textContent = `" ${this.text} "`;
+      sayLogoPic.srcset = this.logo.replace("jpg", "webp");
     });
     container.append(divUser);
   }
@@ -88,15 +92,17 @@ class TestimonialsPhoto{
   }
   makeArrow(type="prev"){
     const arrow = document.createElement("a");
+    if(type=="prev") arrow.textContent ="<";
+            else arrow.textContent = '>';
     arrow.classList.add("testimonials_arrow");
     if (  (type=="prev" && !this.showPrev) || (type=="next" && !this.showNext) ){
-            arrow.textContent = ' ';
+            arrow.classList.add("inactive");
             container.append(arrow);
             return;
           }
     switch (type){
       case "prev": 
-        arrow.textContent = "<";
+        arrow.classList.add("active");
         arrow.addEventListener("click", () => {
           // this.start_index-= this.countOnPage;
           this.start_index -= 1;
@@ -108,7 +114,7 @@ class TestimonialsPhoto{
         });
         break;
       case "next":
-        arrow.textContent = ">";
+        arrow.classList.add("active");
         arrow.addEventListener("click", () => {
           // this.start_index+= this.countOnPage;
           this.start_index += 1;

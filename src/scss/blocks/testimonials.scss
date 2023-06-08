@@ -127,13 +127,19 @@ section.section__testimonials{
                 padding-bottom: 15px;
               }
             }
+            .say__icon{
+              width: 68px;
+              height: 68px;
+              border-radius: 100%;
+            }
           }
           .blueline{
 
             background-color: #3685FB;
             width: 100%;
             height: 16px;
-            border-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
           }
         }
       }
@@ -192,7 +198,13 @@ section.section__testimonials{
   letter-spacing: -0.025em;
   color: #ccc;
 
+}
+.testimonials_arrow.active{
+  text-shadow: #222 1px 1px 5px;
   cursor: pointer;
+}
+.testimonials_arrow.inactive{
+  color: #eee;
 }
 
 }
