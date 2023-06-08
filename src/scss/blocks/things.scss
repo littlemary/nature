@@ -10,6 +10,9 @@ section.section__things{
     letter-spacing: -0.025em;
 
     color: #222222;
+    @media(max-width: 480px){
+      margin-bottom: 30px;
+    }
   }
   .container{
     max-width: 1280px;
@@ -25,17 +28,21 @@ section.section__things{
       align-content: center;
 
     }
-    
+    @media(max-width: 480px){
+      margin-bottom: 30px;
+    }
     .item{
       position: relative;
       max-width: 620px;
       padding-top: 40px;
       @media(max-width: 480px){
-        max-width: 450px;
+        // max-width: 450px;
+        max-width: 80%;
         height: auto;
       }
       @media(max-width: 320px){
-        max-width: 300px;
+        // max-width: 300px;
+        max-width: 80%;
         height: auto;
       }
       &__img{
