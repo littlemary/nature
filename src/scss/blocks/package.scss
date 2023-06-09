@@ -1,6 +1,9 @@
 section.section__package{
   position: relative;
   h2{
+    padding-top: 110px;
+    padding-bottom: 49px;
+
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -9,8 +12,11 @@ section.section__package{
 
     text-align: center;
     color: #222222;
-    padding-top: 110px;
-    padding-bottom: 49px;
+    @media(max-width: 480px){
+      font-size: 38px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
   .pink{
     position:absolute;
@@ -43,6 +49,8 @@ section.section__package{
         }
         @media(max-width: 480px){
           width: 300px;
+          min-height: 500px;
+          margin-bottom: 30px;
         }
 
         box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.13);
@@ -64,12 +72,19 @@ section.section__package{
           letter-spacing: -0.025em;
 
           color: #000000;
+          @media(max-width: 480px){
+            margin-top: 20px;
+          }
+          
         }
         ul{
           margin-top: 93px;
           margin-bottom: auto;
           margin-left: 45px;
           list-style: none;
+          @media(max-width: 480px){
+            margin-top: 15px;
+          }
           li {
             margin-bottom: 5px;
             position: relative;

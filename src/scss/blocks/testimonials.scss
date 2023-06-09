@@ -10,23 +10,25 @@ section.section__testimonials{
     }
     .container{
       position: relative;
+      display: flex;
+      flex-direction: column;
+
       max-width: 1626px;
       height: 1011px;
       margin: 0 auto;
+
       background-color: #fff;
-      display: flex;
-      flex-direction: column;
       border-radius: 10px;
       @media(max-width: 1600px){
         width: 100%;
-        height: 1111px;
+        height: 1000px;
         flex-direction: column;
         margin: 0 auto;
         justify-content: space-between;
       }
       @media(max-width: 480px){
         width: 100%;
-        height: 1300px;
+        height: 1000px;
         flex-direction: column;
         margin: 0 auto;
         justify-content: space-between;
@@ -45,6 +47,9 @@ section.section__testimonials{
           margin-bottom: 0;
           text-align: center;
         }
+        @media(max-width: 480px){
+          margin: 15px auto;
+        }
         h2{
           font-family: 'Montserrat';
           font-style: normal;
@@ -52,6 +57,9 @@ section.section__testimonials{
           font-size: 48px;
           letter-spacing: -0.025em;
           color: #222222;
+          @media(max-width: 480px){
+            font-size: 38px;
+          }
         }
         p{
           width: 705px;
@@ -97,7 +105,7 @@ section.section__testimonials{
           flex-direction: column;
           justify-content: space-between;
           @media(max-width: 480px){
-            width: 100%;
+            width: 90%;
             height: auto;
             padding-top: 15px;
           }
@@ -152,7 +160,7 @@ section.section__testimonials{
       top: 0;
       display: flex;
       justify-content: center;
-      // padding-left: 160px;
+
     }
 }
   
@@ -162,6 +170,11 @@ section.section__testimonials{
   border-radius: 10px;
   border: 1px solid black;
   margin-right: 20px;
+  @media(max-width: 480px){
+    width: 210px;
+    height: 323px;
+    margin-right: 0;
+  }
 }
 .testimonials_photo:last-of-type{
   margin-right: 0;
@@ -182,8 +195,8 @@ section.section__testimonials{
   margin-top: 95px;
 }
 .testimonials_photo.poscenter{
-  margin-left: 0 auto;
-  margin-top: 450px;
+  // margin-left: 0 auto;
+  margin-top: 350px;
 }
 .testimonials_arrow{
   width: 50px;
@@ -197,7 +210,9 @@ section.section__testimonials{
   font-size: 48px;
   letter-spacing: -0.025em;
   color: #ccc;
-
+  @media(max-width: 480px){
+    padding-top: 500px;
+  }
 }
 .testimonials_arrow.active{
   text-shadow: #222 1px 1px 5px;

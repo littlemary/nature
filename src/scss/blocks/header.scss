@@ -1,15 +1,19 @@
 header{
   display: flex;
-  @media(max-width: 1320px){
-    flex-direction: column;
- }
-  padding-top: 72px;
-  padding-bottom: 136px;
-  @media(max-width: 480px){
-    padding-bottom: 72px;
-  }
   justify-content: space-between;
   align-items: center;
+
+  padding-top: 72px;
+  padding-bottom: 136px;
+
+  @media(max-width: 1200px){
+    flex-direction: column;
+  }
+  @media(max-width: 480px){
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   .header__logo{
     padding-left: 100px;
     @media(max-width: 1320px){
@@ -19,9 +23,7 @@ header{
     img{
       width: 180px;
     }
-    
-    
-    }
+  }
   .nav{
     display: flex;
     flex-wrap: wrap;

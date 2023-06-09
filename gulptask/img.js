@@ -7,9 +7,9 @@ const app = require("../config/app.js");
 // Plugins
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
-const imagemin = require("gulp-imagemin");
+const imagemin = require("gulp-imagemin"); //convert to webp format
 const newer = require("gulp-newer");
-const webp = require("gulp-webp");
+const webp = require("gulp-webp");//convert to webp format
 
 
 

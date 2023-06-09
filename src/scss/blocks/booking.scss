@@ -15,6 +15,9 @@ section.section__booking{
       width: 100%;
       background: linear-gradient(90deg, #A18CD1 0%, #FBC2EB 100%);
       z-index:-1000;
+      @media(max-width: 480px){
+        min-height: 400px;
+      }
     }
     &__main{
       min-height: 713px;
@@ -27,7 +30,7 @@ section.section__booking{
       flex-direction: column;
       @media(max-width: 480px){
         width: 100%;
-        min-height: 00px;
+        min-height: 400px;
       }
       h2{
         padding-bottom: 35px;

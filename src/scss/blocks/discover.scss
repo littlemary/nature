@@ -11,6 +11,10 @@
     letter-spacing: -0.025em;
 
     color: #222222;
+    @media(max-width: 480px){
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
   .container{
     margin: 0 auto;

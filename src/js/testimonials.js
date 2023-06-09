@@ -6,7 +6,6 @@ const testimonialsUsers = readFile;
 const sayDiv = document.querySelector(".say");
 const sayLogo = sayDiv.querySelector(".say__icon");
 const sayLogoPic = sayDiv.querySelector('[type]');
-console.log(sayLogoPic);
 const sayText = sayDiv.querySelector(".say__text");
 
 class TestimonialsItem{
@@ -57,6 +56,7 @@ class TestimonialsItem{
       sayLogo.src = this.logo;
       sayText.textContent = `" ${this.text} "`;
       sayLogoPic.srcset = this.logo.replace("jpg", "webp");
+      sayLogoPic.srcset = this.logo.replace("png", "webp");
     });
     container.append(divUser);
   }
@@ -85,6 +85,7 @@ class TestimonialsPhoto{
       case (this.window_width >= 760 && this.window_width <= 1200): this.countOnPage = 2; break;
       case (this.window_width >= 1200 && this.window_width <= 1600): this.countOnPage=3; break;
     }
+    this.countOnPage = 1;
     this.end_index = this.start_index + this.countOnPage;
     if (this.end_index > testimonialsUsers.length){
       this.end_index = testimonialsUsers.length;
