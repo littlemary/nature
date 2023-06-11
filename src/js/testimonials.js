@@ -37,14 +37,7 @@ class TestimonialsItem{
     divUser.classList.add("testimonials_photo");
     divUser.src = this.img;
     divUser.classList.add(this.posClass);
-    //mobile version
-    // if (this.countOnPage == 1){
-    //   divUser.classList.add(`poscenter`);
-    // }
-    // //tablets and PC version
-    // else{
-    //   divUser.classList.add(`pos${this.index}`);
-    // }
+
     if (this.index === 1){
       divUser.classList.add("active");
       sayLogo.src = this.logo;
@@ -85,7 +78,6 @@ class TestimonialsPhoto{
       case (this.window_width >= 760 && this.window_width <= 1200): this.countOnPage = 2; break;
       case (this.window_width >= 1200 && this.window_width <= 1600): this.countOnPage=3; break;
     }
-    this.countOnPage = 1;
     this.end_index = this.start_index + this.countOnPage;
     if (this.end_index > testimonialsUsers.length){
       this.end_index = testimonialsUsers.length;
