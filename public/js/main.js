@@ -9,6 +9,17 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/blog.js":
+/*!************************!*\
+  !*** ./src/js/blog.js ***!
+  \************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _data_testimonials_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/testimonials.json */ \"./src/data/testimonials.json\");\n\r\n\r\n\r\nconst testimonialsUsers = _data_testimonials_json__WEBPACK_IMPORTED_MODULE_0__;\r\nconst container = document.querySelector(\".section_blog\");\r\nconst blogDiv = document.querySelector(\".blog\");\r\nconst blogLogo = blogDiv.querySelector(\".blog__icon\");\r\nconst blogLogoPic = blogDiv.querySelector('[type]');\r\nconst blogText = blogDiv.querySelector(\".blog__text\");\r\n\r\nclass Blog{\r\n  constructor(user, index, photoblock){\r\n    this.img = user.img;\r\n    this.logo = user.logo;\r\n    this.text = user.text;\r\n    this.index = index;\r\n    this.photoblock = photoblock;\r\n  }\r\n  makeActive(e){\r\n    const imgArray = container.querySelectorAll(\".blog_photo\");\r\n    imgArray.forEach((cur)=>{\r\n        cur.classList.remove(\"active\");\r\n    });\r\n    e.target.classList.add(\"active\");\r\n  }\r\n  makeContent(){\r\n    const divUser = document.createElement(\"img\");\r\n    divUser.classList.add(\"blog_photo\");\r\n    divUser.src = this.img;\r\n    if (this.index === 1){\r\n      divUser.classList.add(\"active\");\r\n      blogLogo.src = this.logo;\r\n      blogLogoPic.srcset = this.logo.replace(\"jpg\", \"webp\");\r\n      blogLogoPic.srcset = this.logo.replace(\"png\", \"webp\");\r\n      blogText.textContent = `\" ${this.text} \"`;\r\n     }\r\n    divUser.addEventListener(\"click\", (e)=>{\r\n      this.makeActive(e);\r\n      blogLogo.src = this.logo;\r\n      blogText.textContent = `\" ${this.text} \"`;\r\n      blogLogoPic.srcset = this.logo.replace(\"jpg\", \"webp\");\r\n      blogLogoPic.srcset = this.logo.replace(\"png\", \"webp\");\r\n    });\r\n    this.photoblock.append(divUser);\r\n  }\r\n}\r\n\r\nconst photos = container.querySelectorAll(\".photo\");\r\nphotos.forEach((cur, index)=>{\r\n  const item = new Blog(testimonialsUsers[index], index, cur);\r\n  item.makeContent();\r\n});\r\n\r\n\n\n//# sourceURL=webpack://Food/./src/js/blog.js?");
+
+/***/ }),
+
 /***/ "./src/js/menu.js":
 /*!************************!*\
   !*** ./src/js/menu.js ***!
@@ -25,18 +36,7 @@ eval("// -----------------------------------------\r\n// -------Add _touch and _
   \**************************/
 /***/ (function() {
 
-eval("document.addEventListener(\"DOMLoaded\", () => {\r\n\r\n   include(\"menu.js\");\r\n   include(\"testimonials.js\");\r\n\r\n})\n\n//# sourceURL=webpack://Food/./src/js/script.js?");
-
-/***/ }),
-
-/***/ "./src/js/testimonials.js":
-/*!********************************!*\
-  !*** ./src/js/testimonials.js ***!
-  \********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _data_testimonials_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/testimonials.json */ \"./src/data/testimonials.json\");\n\r\nconst container = document.querySelector(\".container__photo\");\r\n\r\nconst testimonialsUsers = _data_testimonials_json__WEBPACK_IMPORTED_MODULE_0__;\r\n\r\nconst sayDiv = document.querySelector(\".say\");\r\nconst sayLogo = sayDiv.querySelector(\".say__icon\");\r\nconst sayLogoPic = sayDiv.querySelector('[type]');\r\nconst sayText = sayDiv.querySelector(\".say__text\");\r\n\r\nclass TestimonialsItem{\r\n  constructor(user, index, countOnPage, realCount=4){\r\n    this.realCount = realCount;\r\n    this.index = index + 1;\r\n    this.posClass = \"pos1\";\r\n    switch (this.realCount){\r\n      case 1: this.posClass =`poscenter`; break;\r\n      case 2: this.posClass =`pos${index + 1}`; break; // 1 2\r\n      case 3: this.posClass =`pos${index + 1}`; break; // 2 3 4\r\n      case 4: this.posClass =`pos${index + 1}`; break; //1 2 3 4\r\n    }\r\n\r\n    this.img = user.img;\r\n    this.logo = user.logo;\r\n    this.text = user.text;\r\n    this.countOnPage = countOnPage;\r\n  }\r\n  makeActive(e){\r\n    const imgArray = container.querySelectorAll(\".testimonials_photo\");\r\n    imgArray.forEach((cur)=>{\r\n        cur.classList.remove(\"active\");\r\n    });\r\n    e.target.classList.add(\"active\");\r\n  }\r\n  makeContent(){\r\n    const divUser = document.createElement(\"img\");\r\n    divUser.classList.add(\"testimonials_photo\");\r\n    divUser.src = this.img;\r\n    divUser.classList.add(this.posClass);\r\n\r\n    if (this.index === 1){\r\n      divUser.classList.add(\"active\");\r\n      sayLogo.src = this.logo;\r\n      sayLogoPic.srcset = this.logo.replace(\"jpg\", \"webp\");\r\n      sayText.textContent = `\" ${this.text} \"`;\r\n     }\r\n    divUser.addEventListener(\"click\", (e)=>{\r\n      this.makeActive(e);\r\n      sayLogo.src = this.logo;\r\n      sayText.textContent = `\" ${this.text} \"`;\r\n      sayLogoPic.srcset = this.logo.replace(\"jpg\", \"webp\");\r\n      sayLogoPic.srcset = this.logo.replace(\"png\", \"webp\");\r\n    });\r\n    container.append(divUser);\r\n  }\r\n}\r\n\r\n\r\nclass TestimonialsPhoto{\r\n  constructor(start_index = 0){\r\n    this.start_index = start_index;\r\n    // this.window_width = window.innerWidth;\r\n    // this.window_width = screen.width;\r\n    this.window_width = Math.max(document.documentElement.clientWidth, window.innerWidth);\r\n    this.countOnPage = 4;\r\n    this.showNext = false;\r\n    this.showPrev = false;\r\n    this.end_index = this.start_index + this.countOnPage;\r\n    if (this.end_index > testimonialsUsers.length){\r\n      this.end_index = testimonialsUsers.length;\r\n    }\r\n  };\r\n\r\n  makePhotoClasses(){\r\n    // console.log(this.window_width);\r\n    switch (true) {\r\n      case (this.window_width < 760):  this.countOnPage = 1; break;\r\n      case (this.window_width >= 760 && this.window_width <= 1200): this.countOnPage = 2; break;\r\n      case (this.window_width >= 1200 && this.window_width <= 1600): this.countOnPage=3; break;\r\n    }\r\n    this.end_index = this.start_index + this.countOnPage;\r\n    if (this.end_index > testimonialsUsers.length){\r\n      this.end_index = testimonialsUsers.length;\r\n    }\r\n  }\r\n  makeArrow(type=\"prev\"){\r\n    const arrow = document.createElement(\"a\");\r\n    if(type==\"prev\") arrow.textContent =\"<\";\r\n            else arrow.textContent = '>';\r\n    arrow.classList.add(\"testimonials_arrow\");\r\n    if (  (type==\"prev\" && !this.showPrev) || (type==\"next\" && !this.showNext) ){\r\n            arrow.classList.add(\"inactive\");\r\n            container.append(arrow);\r\n            return;\r\n          }\r\n    switch (type){\r\n      case \"prev\": \r\n        arrow.classList.add(\"active\");\r\n        arrow.addEventListener(\"click\", () => {\r\n          // this.start_index-= this.countOnPage;\r\n          this.start_index -= 1;\r\n          this.end_index = this.start_index + this.countOnPage;\r\n          if (this.end_index > testimonialsUsers.length){\r\n            this.end_index = testimonialsUsers.length;\r\n          }\r\n          this.makePhotosArray();\r\n        });\r\n        break;\r\n      case \"next\":\r\n        arrow.classList.add(\"active\");\r\n        arrow.addEventListener(\"click\", () => {\r\n          // this.start_index+= this.countOnPage;\r\n          this.start_index += 1;\r\n          this.end_index = this.start_index + this.countOnPage;\r\n          if (this.end_index > testimonialsUsers.length){\r\n            this.end_index = testimonialsUsers.length;\r\n          }\r\n          this.makePhotosArray();\r\n        });\r\n    }\r\n    container.append(arrow);\r\n  }\r\n  makePhotosArray(){\r\n    this.makePhotoClasses();\r\n    container.innerHTML = '';\r\n    this.showPrev = (this.start_index==0)?false:true;\r\n    this.showNext = ((this.start_index + this.countOnPage) < testimonialsUsers.length) ? true : false;\r\n\r\n    this.makeArrow(\"prev\");\r\n    // if (this.start_index > 0){\r\n    //   this.makeArrow(\"prev\");\r\n    // }    \r\n    const usersArr = testimonialsUsers.slice(this.start_index, this.end_index);\r\n    const realCount = usersArr.length;\r\n    usersArr.forEach((cur, i)=>{\r\n      const item = new TestimonialsItem(cur, i, this.countOnPage, realCount);\r\n      item.makeContent();\r\n    });\r\n\r\n    // if ((this.start_index + this.countOnPage) < testimonialsUsers.length){\r\n    //   this.makeArrow(\"next\");\r\n    // }\r\n    this.makeArrow(\"next\");\r\n  }\r\n}\r\n\r\nconst mainContent = new TestimonialsPhoto();\r\nmainContent.makePhotosArray();\r\n\r\nwindow.addEventListener(\"resize\", mainContent.makePhotosArray());\n\n//# sourceURL=webpack://Food/./src/js/testimonials.js?");
+eval("document.addEventListener(\"DOMLoaded\", () => {\r\n\r\n   include(\"menu.js\");\r\n   include(\"blog.js\");\r\n\r\n})\n\n//# sourceURL=webpack://Food/./src/js/script.js?");
 
 /***/ }),
 
@@ -94,9 +94,9 @@ eval("module.exports = JSON.parse('[{\"img\":\"img/testimonials/say1.webp\",\"lo
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	__webpack_require__("./src/js/blog.js");
 /******/ 	__webpack_require__("./src/js/menu.js");
-/******/ 	__webpack_require__("./src/js/script.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/testimonials.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/script.js");
 /******/ 	
 /******/ })()
 ;

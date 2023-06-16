@@ -1,6 +1,6 @@
 document.addEventListener("DOMLoaded", () => {
 
    include("menu.js");
-   include("testimonials.js");
+   include("blog.js");
 
 })
