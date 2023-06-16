@@ -1,0 +1,105 @@
+.header{
+  .header__menu {
+  }
+  .menu {
+    &__body{
+    }
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 44px;
+      justify-content: end;
+    }
+    &__link{
+      font-family: $mainFont;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: black;
+      &:hover{
+        color: $main_color;
+      }
+      &.active{
+        color: $main_color;
+      }
+      &.btn{
+        padding: 17px 40px;
+
+        background-color: $main_color;
+        color: white;
+        border-radius: 50px;
+
+        font-family: $mainFont;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: -0.025em;
+      }
+    }
+  }
+
+// /* -----SUBMENU------ */
+// .menu__list > li {
+//   position: relative;
+//   margin: 0 0 0 20px;
+// }
+// .menu__sub-list {
+//   position: absolute;
+//   top: 100%;
+//   right: 0;
+//   background-color: #650c0c;
+//   padding: 15px;
+//   min-width: 100px;
+// }
+// .menu__sub-list li {
+//   margin: 0 0 10px 0;
+// }
+// .menu__sub-list li:last-child {
+//   margin: 0;
+// }
+
+// .menu__sub-link {
+//   color: #fff;
+// }
+// .menu__sub-link:hover {
+//   text-decoration: underline;
+// }
+// .menu__arrow{
+//   display: none;
+// }
+
+// /* ------------------- */
+// body._pc .menu__list > li:hover .menu__sub-list{
+//   opacity: 1;
+//   visibility: visible;
+//   transform: translate(0, 0);
+//   pointer-events: all;
+// }
+// body._touch .menu__list > li{
+//   display: flex;
+//   align-items: center;
+// }
+// body._touch .menu__link{
+//   flex: 1 1 auto;
+// }
+// body._touch .menu__arrow{
+//   display: block;
+//   width: 0px;
+//   height: 0px;
+//   margin: 0 0 0 5px;
+//   transition: transform 0.3s ease 0s;
+//   border-left: 5px solid transparent;
+//   border-right: 5px solid transparent;
+//   border-top: 10px solid #fff;
+// }
+// body._touch .menu__list > li._active .menu__sub-list{
+//   opacity: 1;
+//   visibility: visible;
+//   transform: translate(0, 0);
+//   pointer-events: all;
+// }
+// body._touch .menu__list > li._active .menu__arrow{
+//   transform: rotate(-180deg);
+// }
+// /* ------------------- */
+
+}

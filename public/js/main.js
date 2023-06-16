@@ -9,13 +9,23 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/menu.js":
+/*!************************!*\
+  !*** ./src/js/menu.js ***!
+  \************************/
+/***/ (function() {
+
+eval("// -----------------------------------------\r\n// -------Add _touch and _pc classes to body\r\n// -----------------------------------------\r\nclass detectMob{\r\n  constructor(){\r\n    this.toMatch = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i];  \r\n  }\r\n  detectMob(){\r\n    return this.toMatch.some((toMatchItem) => {\r\n      return navigator.userAgent.match(toMatchItem);\r\n    })\r\n  }\r\n  addClasses(){\r\n    if (this.detectMob()){\r\n      document.body.classList.add('_touch');\r\n      // add arrows to all submenu in menu\r\n      let menuArrows = document.querySelectorAll(\".menu__arrow\");\r\n       menuArrows.forEach((cur, i)=>{\r\n          cur.addEventListener(\"click\", (e)=>{\r\n          cur.parentElement.classList.toggle('_active');\r\n          });\r\n        });\r\n    }\r\n    else{\r\n      document.body.classList.add('_pc');\r\n    }\r\n  }\r\n}\r\n\r\nconst checkMob = new detectMob().addClasses();\r\n\r\n// -----------------------------\r\n// -------Scroll on click-------\r\n// -----------------------------\r\nconst menuLinks = document.querySelectorAll('.menu__link[data-goto]');\r\nif (menuLinks.length > 0){\r\n  menuLinks.forEach(item=>{\r\n    item.addEventListener(\"click\", (e)=>{\r\n      const menuLink = e.target;\r\n      if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){\r\n        const gotoBlock = document.querySelector(menuLink.dataset.goto); \r\n        // const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;\r\n        // if header position = fixed\r\n        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;\r\n        window.scrollTo({\r\n          top: gotoBlockValue,\r\n          behavior: \"smooth\"\r\n        });\r\n        e.preventDefault();\r\n      }\r\n    });\r\n  });\r\n}\n\n//# sourceURL=webpack://Food/./src/js/menu.js?");
+
+/***/ }),
+
 /***/ "./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
 /***/ (function() {
 
-eval("document.addEventListener(\"DOMLoaded\", () => {\r\n\r\n   include(\"testimonials.js\");\r\n\r\n})\n\n//# sourceURL=webpack://Food/./src/js/script.js?");
+eval("document.addEventListener(\"DOMLoaded\", () => {\r\n\r\n   include(\"menu.js\");\r\n   include(\"testimonials.js\");\r\n\r\n})\n\n//# sourceURL=webpack://Food/./src/js/script.js?");
 
 /***/ }),
 
@@ -84,6 +94,7 @@ eval("module.exports = JSON.parse('[{\"img\":\"img/testimonials/say1.webp\",\"lo
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	__webpack_require__("./src/js/menu.js");
 /******/ 	__webpack_require__("./src/js/script.js");
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/js/testimonials.js");
 /******/ 	
