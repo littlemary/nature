@@ -22,6 +22,7 @@ class detectMob{
         });
     }
     else{
+      // document.body.classList.add('_touch');
       document.body.classList.add('_pc');
     }
   }
@@ -29,6 +30,18 @@ class detectMob{
 
 const checkMob = new detectMob().addClasses();
 
+// ------------------------
+// --------Burger----------
+// ------------------------
+
+const iconMenu = document.querySelector(".menu__icon");
+if (iconMenu){
+  iconMenu.addEventListener("click", (e)=>{
+    const menuBody = document.querySelector(".menu__body");
+    menuBody.classList.toggle("_active");
+    iconMenu.classList.toggle("_active");
+  });
+}
 // -----------------------------
 // -------Scroll on click-------
 // -----------------------------

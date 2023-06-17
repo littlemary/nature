@@ -15,51 +15,59 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- ----------------------
--------Header---------
----------------------- -->
-
   <header class="header">
-    <div class="container">
-      <div class="header__logo">
-        <img src="icons/Logo.svg" alt="logo">
-      </div>
-  
+    <div class="header__container">
+      <a href="" class="header__logo"><img src="icons/Logo.svg" alt="logo"></a>
       <div class="header__menu menu">
           <div class="menu__icon icon-menu">
-              <span></span>
-              <span></span>
               <span></span>
           </div>
           <nav class="menu__body">
               <ul class="menu__list">
-                  <li><a data-goto=".page__section_1" class="menu__link active" href="#">Home</a></li>
-                  <li><a data-goto=".page__section_7" class="menu__link" href="#">About</a></li>
-                  <li><a data-goto=".page__section_2" class="menu__link" href="#">Experience</a></li>
-                  <li><a data-goto=".page__section_3" class="menu__link" href="#">Packages</a></li>
-                  <li><a data-goto=".page__section_4" class="menu__link" href="#">Contact Us</a></li>
-                  <li><a data-goto=".page__section_5" class="menu__link" href="#">Blog</a></li>
-                  <li><a data-goto=".page__section_6" class="menu__link btn" href="#">Book now</a></li>
-  
+                <li><a data-goto=".page__section_1" class="menu__link active" href="#">Home</a></li>
+                <li><a data-goto=".page__section_7" class="menu__link" href="#">About</a></li>
+                <li><a data-goto=".page__section_2" class="menu__link" href="#">Experience</a></li>
+                <li><a data-goto=".page__section_3" class="menu__link" href="#">Packages</a></li>
+                <li><a data-goto=".page__section_4" class="menu__link" href="#">Contact Us</a></li>
+                  <li>
+                    <a data-goto=".page__section_3" href="#" class="menu__link">Chapter 3</a>
+                    <span class="menu__arrow"></span>
+                    <ul class="menu__sub-list">
+                      <li><a href="#" class="menu__sub-link">Page 1</a></li>
+                      <li><a href="#" class="menu__sub-link">Page 2</a></li>
+                      <li><a href="#" class="menu__sub-link">Page 3</a></li>
+                    </ul>
+                  </li>
+                
+                <li><a data-goto=".page__section_5" class="menu__link" href="#">Blog</a></li>
+                <li>
+                  <a data-goto=".page__section_3" href="#" class="menu__link">Chapter 3</a>
+                  <span class="menu__arrow"></span>
+                  <ul class="menu__sub-list">
+                    <li><a href="#" class="menu__sub-link">Page 1</a></li>
+                    <li><a href="#" class="menu__sub-link">Page 2</a></li>
+                    <li><a href="#" class="menu__sub-link">Page 3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a data-goto=".page__section_3" href="#" class="menu__link">Chapter 3</a>
+                  <span class="menu__arrow"></span>
+                  <ul class="menu__sub-list">
+                    <li><a href="#" class="menu__sub-link">Page 1</a></li>
+                    <li><a href="#" class="menu__sub-link">Page 2</a></li>
+                    <li><a href="#" class="menu__sub-link">Page 3</a></li>
+                  </ul>
+                </li>
+
+              <li><a data-goto=".page__section_6" class="menu__link btn" href="#">Book now</a></li>
               </ul>   
           </nav>
       </div>
-    </div>
-    
-    
-    <!-- <nav class="nav">
-        <a href="#" class="nav__item nav__item-active">Home</a>
-        <a href="#" class="nav__item">About</a>
-        <a href="#" class="nav__item">Experience</a>
-        <a href="#" class="nav__item">Packages</a>
-        <a href="#" class="nav__item">Contact Us</a>
-        <a href="#" class="nav__item">Blog</a>
-        <a href="#" class="nav__item-btn">Book now</a>
-      </ul>
-    </nav> -->
+      </div>  
   </header>
 
-@@include("sections/promo.html")
+
+ @@include("sections/promo.html")
 @@include("sections/booking.html")
 
 @@include("sections/discover.html")

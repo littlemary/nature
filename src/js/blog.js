@@ -27,7 +27,7 @@ class Blog{
     const divUser = document.createElement("img");
     divUser.classList.add("blog_photo");
     divUser.src = this.img;
-    if (this.index === 1){
+    if (this.index === 0){
       divUser.classList.add("active");
       blogLogo.src = this.logo;
       blogLogoPic.srcset = this.logo.replace("jpg", "webp");
