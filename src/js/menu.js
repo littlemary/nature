@@ -40,6 +40,7 @@ if (iconMenu){
     const menuBody = document.querySelector(".menu__body");
     menuBody.classList.toggle("_active");
     iconMenu.classList.toggle("_active");
+    document.body.classList.toggle("_lock");
   });
 }
 // -----------------------------
@@ -55,6 +56,14 @@ if (menuLinks.length > 0){
         // const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;
         // if header position = fixed
         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
+
+        if (iconMenu.classList.contains("_active")){
+          const menuBody = document.querySelector(".menu__body");
+          menuBody.classList.remove("_active");
+          iconMenu.classList.remove("_active");
+          document.body.classList.remove("_lock");
+        }
+
         window.scrollTo({
           top: gotoBlockValue,
           behavior: "smooth"
